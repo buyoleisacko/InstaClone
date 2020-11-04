@@ -12,7 +12,7 @@
         android:layout_height="40dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_baseline_person_24" />
+        app:srcCompat="@drawable/profile_pic" />
 
     <TextView
         android:id="@+id/tvUserName"
@@ -34,7 +34,7 @@
         app:layout_constraintBottom_toBottomOf="@id/imgAvatar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@id/imgAvatar"
-        app:srcCompat="@drawable/ic_baseline_more_vert_24" />
+        app:srcCompat="@drawable/profile_pic" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -54,7 +54,7 @@
         android:layout_marginTop="6dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/imageView"
-        app:srcCompat="@drawable/ic_heart" />
+        app:srcCompat="@drawable/heart" />
 
     <ImageView
         android:id="@+id/imgComments"
@@ -64,7 +64,7 @@
         app:layout_constraintBottom_toBottomOf="@id/imgLikes"
         app:layout_constraintStart_toEndOf="@id/imgLikes"
         app:layout_constraintTop_toTopOf="@id/imgLikes"
-        app:srcCompat="@drawable/ic_comment_icon" />
+        app:srcCompat="@drawable/ic_baseline_lens_24" />
 
     <ImageView
         android:id="@+id/imageView7"

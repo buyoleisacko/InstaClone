@@ -20,4 +20,4 @@ class ActivityFragment : Fragment() {
     }
 
 
-    }
+}

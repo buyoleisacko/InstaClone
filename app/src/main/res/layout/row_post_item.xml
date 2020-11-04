@@ -7,342 +7,116 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="17dp"
-        android:layout_height="13dp"
-        android:layout_marginStart="12dp"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="141dp"
-        tools:srcCompat="@tools:sample/avatars" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="140dp"
-        android:layout_marginEnd="32dp"
-        android:text="Username"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="70dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginBottom="180dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/ic_baseline_favorite_border_24" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="116dp"
-        android:layout_height="34dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="16dp"
-        android:text="Liked by Username and others"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.357"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="405dp"
-        android:layout_height="312dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="180dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
+        android:id="@+id/imgAvatar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_person_24" />
+
+    <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:text="_anini"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/imgAvatar"
+        app:layout_constraintStart_toEndOf="@+id/imgAvatar"
+        app:layout_constraintTop_toTopOf="@id/imgAvatar" />
+
+    <ImageView
+        android:id="@+id/imgMore"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@id/imgAvatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/imgAvatar"
+        app:srcCompat="@drawable/ic_baseline_more_vert_24" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="6dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgAvatar"
         tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
-    <TextView
-        android:id="@+id/tvCaption"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="72dp"
-        android:text="A cactus is a member of the plant,."
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.446"
+    <ImageView
+        android:id="@+id/imgLikes"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="6dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/tvUserName2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:text="Username"
-        app:layout_constraintEnd_toStartOf="@+id/tvCaption"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-    <TextView
-        android:id="@+id/tvViewComments"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        android:text="ViewAllComments"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvUserName2" />
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        app:srcCompat="@drawable/ic_heart" />
 
     <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="96dp"
-        android:layout_height="21dp"
-        app:srcCompat="@drawable/ic_baseline_more_horiz_24"
-        tools:layout_editor_absoluteX="285dp"
-        tools:layout_editor_absoluteY="140dp" />
-
-    <ImageView
-        android:id="@+id/imageView6"
-        android:layout_width="46dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/camera" />
+        android:id="@+id/imgComments"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintBottom_toBottomOf="@id/imgLikes"
+        app:layout_constraintStart_toEndOf="@id/imgLikes"
+        app:layout_constraintTop_toTopOf="@id/imgLikes"
+        app:srcCompat="@drawable/ic_comment_icon" />
 
     <ImageView
         android:id="@+id/imageView7"
-        android:layout_width="155dp"
-        android:layout_height="44dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView24"
-        app:layout_constraintStart_toEndOf="@+id/imageView6"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo" />
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="12dp"
+        app:layout_constraintBottom_toBottomOf="@id/imgLikes"
+        app:layout_constraintStart_toEndOf="@id/imgComments"
+        app:layout_constraintTop_toTopOf="@id/imgLikes"
+        app:srcCompat="@drawable/ic_direct" />
+
+    <TextView
+        android:id="@+id/tvLikes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="6dp"
+        android:text="69 Likes liked by Huda_ and 98 others"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/imgLikes" />
+
+    <TextView
+        android:id="@+id/tvCaption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="6dp"
+        android:text="Write your caption here ... #HashTag ...More"
+        android:textColor="@android:color/black"
+        app:layout_constraintTop_toBottomOf="@id/tvLikes" />
 
     <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="78dp"
-        android:layout_height="24dp"
-        app:srcCompat="@drawable/direct"
-        tools:layout_editor_absoluteX="298dp"
-        tools:layout_editor_absoluteY="24dp" />
-
-    <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="59dp"
-        android:layout_height="33dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/imgAddComment"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="12dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/direct"
-        tools:layout_editor_absoluteY="510dp" />
-
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="57dp"
-        android:layout_height="50dp"
-        app:srcCompat="@drawable/search"
-        tools:layout_editor_absoluteX="96dp"
-        tools:layout_editor_absoluteY="501dp" />
+        app:layout_constraintTop_toBottomOf="@id/tvCaption"
+        app:srcCompat="@drawable/ic_profile_pic" />
 
     <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
+        android:id="@+id/tvAddComment"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:text="YourStory"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="107dp" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Username"
-        tools:layout_editor_absoluteX="96dp"
-        tools:layout_editor_absoluteY="107dp" />
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Username"
-        tools:layout_editor_absoluteX="176dp"
-        tools:layout_editor_absoluteY="107dp" />
-
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Username"
-        tools:layout_editor_absoluteX="253dp"
-        tools:layout_editor_absoluteY="107dp" />
-
-    <TextView
-        android:id="@+id/textView13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Username"
-        tools:layout_editor_absoluteX="332dp"
-        tools:layout_editor_absoluteY="107dp" />
-
-    <ImageView
-        android:id="@+id/imageView16"
-        android:layout_width="38dp"
-        android:layout_height="33dp"
-        android:layout_marginStart="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/profile_pic"
-        tools:layout_editor_absoluteY="648dp" />
-
-    <TextView
-        android:id="@+id/textView12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="AddaComment"
-        tools:layout_editor_absoluteX="69dp"
-        tools:layout_editor_absoluteY="659dp" />
-
-    <ImageView
-        android:id="@+id/imageView17"
-        android:layout_width="54dp"
-        android:layout_height="43dp"
-        app:srcCompat="@drawable/home"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="691dp" />
-
-    <ImageView
-        android:id="@+id/imageView18"
-        android:layout_width="69dp"
-        android:layout_height="41dp"
-        app:srcCompat="@drawable/search"
-        tools:layout_editor_absoluteX="77dp"
-        tools:layout_editor_absoluteY="693dp" />
-
-    <ImageView
-        android:id="@+id/imageView19"
-        android:layout_width="63dp"
-        android:layout_height="34dp"
-        app:srcCompat="@drawable/add"
-        tools:layout_editor_absoluteX="163dp"
-        tools:layout_editor_absoluteY="700dp" />
-
-    <ImageView
-        android:id="@+id/imageView21"
-        android:layout_width="87dp"
-        android:layout_height="37dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="6dp"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@id/imgAddComment"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/profile_pic"
-        tools:layout_editor_absoluteY="693dp" />
-
-    <ImageView
-        android:id="@+id/imageView22"
-        android:layout_width="43dp"
-        android:layout_height="36dp"
-        app:srcCompat="@drawable/bookmark"
-        tools:layout_editor_absoluteX="349dp"
-        tools:layout_editor_absoluteY="507dp" />
-
-    <ImageView
-        android:id="@+id/imageView24"
-        android:layout_width="66dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView8"
-        app:layout_constraintStart_toEndOf="@+id/imageView7"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/igtv" />
-
-    <ImageView
-        android:id="@+id/imageView28"
-        android:layout_width="226dp"
-        android:layout_height="72dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/whatsapp_image_2020_10_25_at_11_40_58_pm"
-        tools:layout_editor_absoluteY="662dp" />
-
-    <ImageView
-        android:id="@+id/imageView30"
-        android:layout_width="129dp"
-        android:layout_height="53dp"
-        app:srcCompat="@drawable/liveig"
-        tools:layout_editor_absoluteX="69dp"
-        tools:layout_editor_absoluteY="54dp" />
-
-    <ImageView
-        android:id="@+id/imageView31"
-        android:layout_width="226dp"
-        android:layout_height="57dp"
-        app:srcCompat="@drawable/igupdated"
-        tools:layout_editor_absoluteX="91dp"
-        tools:layout_editor_absoluteY="56dp" />
-
-    <ImageView
-        android:id="@+id/imageView32"
-        android:layout_width="188dp"
-        android:layout_height="56dp"
-        app:srcCompat="@drawable/igupdated"
-        tools:layout_editor_absoluteX="170dp"
-        tools:layout_editor_absoluteY="60dp" />
-
-    <ImageView
-        android:id="@+id/imageView33"
-        android:layout_width="211dp"
-        android:layout_height="57dp"
-        app:srcCompat="@drawable/igupdated"
-        tools:layout_editor_absoluteX="221dp"
-        tools:layout_editor_absoluteY="60dp" />
-
-    <ImageView
-        android:id="@+id/imageView34"
-        android:layout_width="74dp"
-        android:layout_height="51dp"
-        app:srcCompat="@drawable/capture"
-        tools:layout_editor_absoluteX="12dp"
-        tools:layout_editor_absoluteY="60dp" />
-
-    <ImageView
-        android:id="@+id/imageView35"
-        android:layout_width="48dp"
-        android:layout_height="35dp"
-        app:srcCompat="@drawable/profile"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="558dp" />
-
-    <ImageView
-        android:id="@+id/imageView36"
-        android:layout_width="55dp"
-        android:layout_height="33dp"
-        app:srcCompat="@drawable/profile"
-        tools:layout_editor_absoluteX="29dp"
-        tools:layout_editor_absoluteY="559dp" />
-
-    <ImageView
-        android:id="@+id/imageView38"
-        android:layout_width="55dp"
-        android:layout_height="33dp"
-        app:srcCompat="@drawable/profile"
-        tools:layout_editor_absoluteX="54dp"
-        tools:layout_editor_absoluteY="559dp" />
+        app:layout_constraintStart_toEndOf="@id/imgAddComment"
+        app:layout_constraintTop_toTopOf="@id/imgAddComment"
+        tools:text="Add Comment here .." />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

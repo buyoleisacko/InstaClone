@@ -1,4 +1,3 @@
 package com.example.instaclone
 
-class Story {
-}
+data class Story (var imageUrl: String, var username: String)

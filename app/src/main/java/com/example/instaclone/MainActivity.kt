@@ -1,65 +1,64 @@
 package com.example.instaclone
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.viewpager.widget.ViewPager
+import android.view.Menu
+import android.view.Window
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
-import com.example.instaclone.ViewPagerAdapter as ViewPagerAdapter1
+
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE)
         setContentView(R.layout.activity_main)
+        setSupportActionBar(toolbarHome)
+
         setupViewPager()
     }
 
-
     fun setupViewPager() {
-        val viewPagerAdapter = ViewPagerAdapter1(supportFragmentManager)
-        viewpager.adapter = viewPagerAdapter
-        bottom_nav_menu.setOnNavigationItemSelectedListener { item ->
+
+        val viewPagerAdapter = ViewPagerAdapter(supportFragmentManager)
+        viewPager.adapter = viewPagerAdapter
+        bottomNav.setOnNavigationItemSelectedListener { item ->
             return@setOnNavigationItemSelectedListener when (item.itemId) {
                 R.id.home -> {
-                    viewpager.currentItem = 0
+                    viewPager.currentItem = 0
                     true
                 }
+
                 R.id.search -> {
-                    viewpager.currentItem = 1
+                    viewPager.currentItem = 1
                     true
                 }
-                R.id.add -> {
-                    viewpager.currentItem = 2
+                R.id.addPost -> {
+                    viewPager.currentItem = 2
                     true
                 }
-                R.id.heart -> {
-                    viewpager.currentItem = 3
+
+                R.id.activity -> {
+                    viewPager.currentItem = 3
                     true
                 }
+
                 R.id.profile -> {
-                    viewpager.currentItem = 4
+                    viewPager.currentItem = 4
                     true
                 }
+
                 else -> {
-                    true
+                    false
                 }
             }
         }
     }
 
-    fun setupViewPager2() {
-        val vpa = ViewPagerAdapter1(supportFragmentManager)
-        ViewPagerAdapter1=vpa
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        menuInflater.inflate(R.menu.menu_home, menu)
+        return true
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-

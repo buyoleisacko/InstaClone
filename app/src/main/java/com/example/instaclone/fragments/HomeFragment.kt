@@ -1,11 +1,13 @@
 package com.example.instaclone.fragments
 
+import android.app.Fragment
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.instaclone.*
 import kotlinx.android.synthetic.main.fragment_home.*
+import java.util.*
 import kotlinx.android.synthetic.main.fragment_home.rvStories as rvStories1
 
 
